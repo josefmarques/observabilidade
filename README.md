@@ -1,3 +1,7 @@
+### Informações do Projeto
+
+Esse projeto permite tutorial de como executar o prometheus, alertmanager, criar alertrules utilizando dockercompose e k8s
+
 ### Instalando Prometheus no K8s
 
 ```
@@ -36,6 +40,10 @@ Site interessante para teste de webhook
 https://pruu.herokuapp.com
 
 ```
+
+### Instalando no Docker
+
+Para instalar no docker, basta executar o dockercompose
 
 
 
