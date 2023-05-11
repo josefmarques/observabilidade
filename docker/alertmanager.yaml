@@ -1,28 +1,39 @@
 global:
+  opsgenie_api_key: 
 route:
-  receiver: Default
-  group_by: ['alertname'] # Alertas sendo agrupados
+  receiver: team-pager
+  group_by: [cluster] # Alertas sendo agrupados
   group_wait: 15s         # Quanto tempo ele aguarda para enviar a notificação, agrupa e envia tudo junto
   group_interval: 15s     # Intervalo para poder enviar mais alertas agrupado
   repeat_interval: 1m     # Quanto tempo dou de tolerancia para enviar a mesma notificação
 
 
   routes:
+  - receiver: 'team-pager'
+    match:
+      severity: page
+
   - receiver: 'AlertaDatabase'
     match:
       team: mongodb
-
 
   - receiver: 'AlertaWebApi'
     match:
       team: webapi
 
 
+
 receivers:
+- name: team-pager
+  opsgenie_configs:
+  - api_key: 
+    responders:
+      - name: at-sre
+        type: team
+
 - name: Default
   webhook_configs:
   - url: 'https://pruu.herokuapp.com/dump/wpwebhookdefault'
-
 
 - name: AlertaDatabase
   webhook_configs:
@@ -31,3 +42,5 @@ receivers:
 - name: AlertaWebApi
   webhook_configs:
   - url: 'https://pruu.herokuapp.com/dump/wpwebhookdefault'
+
+    

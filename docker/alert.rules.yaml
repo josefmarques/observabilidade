@@ -5,7 +5,7 @@ groups:
     expr: rate(mongodb_op_counters_total{type="query"}[10m]) > 0.15
     for:  5s
     labels:
-      team: mongodb
+      severity: page
     annotations:
       titulo: "Muitas consultas"
       descricao: "O {{ $labels.instance }}servidor de mongodb está com muitas consultas"
@@ -17,7 +17,7 @@ groups:
     expr: sum(rate(http_requests_received_total[1m]))  by (instance) > 1
     for: 30s
     labels:
-      team: webapi
+      severity: page
     annotations:
       titulo: "Número alto de acessos"
       descricao: "{{ $labels.instance }} está com um número alto de acessos ({{ $value }}s)"
