@@ -46,7 +46,7 @@ https://pruu.herokuapp.com
 Para instalar no docker, basta executar o dockercompose
 
 
-### Informação importante sobre alertas 
+### Informação importante sobre Alertas 
 
 Monitore para seus usuários
 Eu chamo isso de "monitoramento baseado em sintomas", em contraste com "monitoramento baseado em causas". Seus usuários se importam se seus servidores MySQL estão inativos? Não, eles se importam se suas consultas estão falhando. (Talvez você já esteja se encolhendo, apaixonado por suas regras Nagios para servidores MySQL? Seus usuários nem sabem que seus servidores MySQL existem!) Seus usuários se importam se um binário de suporte (ou seja, caminho não veiculado) está em um reiniciar-loop? Não, eles se importam se seus recursos estão falhando. Eles se importam se o envio de dados está falhando? Não, eles se preocupam se seus resultados são recentes.
