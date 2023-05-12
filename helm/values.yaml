@@ -1148,6 +1148,8 @@ alertmanager:
     runAsGroup: 65534
     fsGroup: 65534
 
+  # Changes Made by Issues https://github.com/prometheus-community/helm-charts/issues/393
+  
   config:
     global:
     route:
