@@ -48,6 +48,15 @@ services:
     networks:
       - pedelogo
 
+  grafana:
+    image: grafana/grafana-oss:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - pedelogo
+
   alertmanager:
     image: prom/alertmanager:v0.21.0
     volumes:
