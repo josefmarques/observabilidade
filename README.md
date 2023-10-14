@@ -1,5 +1,5 @@
 ### Informações do Projeto
-Esse projeto é uma cópia do git de https://github.com/mmacanmunhoz/prometheus, portanto os créditos são do seu criador e não meus.
+Esse projeto é uma cópia de https://github.com/mmacanmunhoz/prometheus, portanto os créditos são do seu criador e não meus.
 Esse projeto permite tutorial de como executar o prometheus, alertmanager, criar alertrules utilizando dockercompose e k8s
 
 ### Instalando Prometheus no K8s
