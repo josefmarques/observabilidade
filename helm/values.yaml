@@ -401,6 +401,7 @@ server:
     ## Prometheus server data Persistent Volume existing claim name
     ## Requires server.persistentVolume.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
+    #server.persistentVolume.enabled: true
     existingClaim: ""
 
     ## Prometheus server data Persistent Volume mount root path
@@ -409,7 +410,7 @@ server:
 
     ## Prometheus server data Persistent Volume size
     ##
-    size: 8Gi
+    size: 15Gi
 
     ## Prometheus server data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
@@ -418,7 +419,7 @@ server:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    # storageClass: "-"
+    storageClass: "nfs-csi"
 
     ## Prometheus server data Persistent Volume Binding Mode
     ## If defined, volumeBindingMode: <volumeBindingMode>
